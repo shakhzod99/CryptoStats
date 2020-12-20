@@ -22,7 +22,7 @@ data class CoinPriceInfo (
     @androidx.annotation.NonNull
     @SerializedName("FROMSYMBOL")
     @Expose
-    val fromSymbol: String?,
+    val fromSymbol: String,
 
     @SerializedName("TOSYMBOL")
     @Expose
