@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoinDetailActivity"
+    android:backgroundTint="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/imageViewLogoIconInDetailActivity"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/textViewFromSymBol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewSlash"
+        app:layout_constraintEnd_toStartOf="@id/textViewSlash"
+        app:layout_constraintTop_toTopOf="@id/textViewSlash"
+        tools:text="BTC" />
+
+    <TextView
+        android:id="@+id/textViewSlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="@string/slash"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogoIconInDetailActivity" />
+
+    <TextView
+        android:id="@+id/textViewToSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewSlash"
+        app:layout_constraintStart_toEndOf="@id/textViewSlash"
+        app:layout_constraintTop_toTopOf="@id/textViewSlash"
+        tools:text="USD" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#AEFDF6"
+        app:layout_constraintTop_toBottomOf="@id/textViewSlash">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/textViewPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/price_label"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/textViewPriceLabel"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="7352.5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#63000000"
+                app:layout_constraintTop_toBottomOf="@id/textViewPriceLabel" />
+
+            <TextView
+                android:id="@+id/textViewMinPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/min_price_label"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPriceLabel" />
+
+            <TextView
+                android:id="@+id/textViewMinPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/textViewMinPriceLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewPriceLabel"
+                tools:text="7110.0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#63000000"
+                app:layout_constraintTop_toBottomOf="@id/textViewMinPriceLabel" />
+
+            <TextView
+                android:id="@+id/textViewMaxPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/max_price_label"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMinPriceLabel" />
+
+            <TextView
+                android:id="@+id/textViewMaxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/textViewMaxPriceLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewMinPriceLabel"
+                tools:text="7820.1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#63000000"
+                app:layout_constraintTop_toBottomOf="@id/textViewMaxPriceLabel" />
+
+            <TextView
+                android:id="@+id/textViewLastMarketLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/last_market_label"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMaxPriceLabel" />
+
+            <TextView
+                android:id="@+id/textViewLastMarket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/textViewLastMarketLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewMaxPriceLabel"
+                tools:text="Bitfinex" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#63000000"
+                app:layout_constraintTop_toBottomOf="@id/textViewLastMarketLabel" />
+
+            <TextView
+                android:id="@+id/textViewLastUpdateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/last_updated_label"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLastMarketLabel" />
+
+            <TextView
+                android:id="@+id/textViewLastUpdateInDetailActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/textViewLastUpdateLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewLastMarket"
+                tools:text="21:05:16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

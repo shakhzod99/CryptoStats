@@ -4,11 +4,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import com.princeinc.cryptostats.utils.convertTimeStampToTime
 import io.reactivex.annotations.NonNull
+import com.princeinc.cryptostats.api.ApiFactory.BASE_IMAGE_URL as BASE_IMAGE_URL1
 
 
 @Entity(tableName = "full_price_list")
-data class CoinPriceInfo (
+data class CoinPriceInfo(
     @SerializedName("TYPE")
     @Expose
     val type: String?,
@@ -167,4 +169,13 @@ data class CoinPriceInfo (
     @SerializedName("IMAGEURL")
     @Expose
     val imageUrl: String?
-)
+) {
+    fun getFormattedTime(): String {
+        return convertTimeStampToTime(lastUpdate)
+    }
+
+    // Возвращает полный URL картинки
+    fun getFullImageUrl(): String{
+        return BASE_IMAGE_URL1 +  imageUrl
+    }
+}
