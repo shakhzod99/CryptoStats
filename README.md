@@ -1,3 +1,4 @@
 # CryptoStats
 Get all the information about the top cryptocurrencies
-<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
+
+<img src="https://github.com/shakhzod99/CryptoStats/blob/master/CryptoStats.gif"/>
